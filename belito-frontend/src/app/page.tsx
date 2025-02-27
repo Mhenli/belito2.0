@@ -36,7 +36,7 @@ export default function ChatPage() {
     setIsTyping(true);
 
     try {
-      const { data } = await axios.post("http://localhost:8000/chat", { text });
+      const { data } = await axios.post("https://belito2-0.onrender.com", { text });
 
       setTimeout(() => {
         setMessages((prev) => [...prev, { sender: "🤖 Belito", text: data.response }]);

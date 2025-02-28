@@ -47,3 +47,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+import psutil
+
+def check_memory():
+    process = psutil.Process(os.getpid())
+    mem = process.memory_info().rss / (1024 * 1024)  # Convierte a MB
+    print(f"Uso de memoria: {mem:.2f} MB")
+
+check_memory()

@@ -16,6 +16,7 @@ uvicorn
 python-dotenv
 openai
 langchain
+langchain-openai
 pymupdf
 sentence-transformers
 torch

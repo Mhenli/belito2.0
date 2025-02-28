@@ -9,6 +9,7 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia el código fuente del backend al contenedor
+COPY . .
 COPY backend /app/backend
 COPY .env /app/.env
 

@@ -1,0 +1,13 @@
+# Ignorar entornos virtuales y dependencias
+.venv/
+belito-backend/.venv/
+belito-backend/__pycache__/
+belito-backend/*.pyc
+belito-backend/*.pyo
+
+# Ignorar archivos de configuración sensible
+belito-backend/.env
+
+# Ignorar logs y archivos temporales
+belito-backend/chatbot_log.json
+belito-backend/chatbot_log.txt.DS_Store

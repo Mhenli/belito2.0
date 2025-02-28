@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  belito-backend:
+    build:
+      context: .  # Usa la raíz del proyecto correctamente
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend  # Corregí la ruta del volumen
+    env_file:
+      - .env  # Carga el archivo .env correctamente
+    environment:
+      - ENV=production
+    restart: always

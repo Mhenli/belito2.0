@@ -20,4 +20,4 @@ pymupdf
 sentence-transformers
 torch
 faiss-cpu
-numpy
+numpygunicorn

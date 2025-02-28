@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from backend.chatbot import AdvancedChatbot
+from chatbot import AdvancedChatbot
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + "/.."))

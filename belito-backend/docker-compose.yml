@@ -8,7 +8,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/app/backend  # Corregí la ruta del volumen
+      - .:/app  # ✅ Ahora la raíz del proyecto se monta en /app
     env_file:
       - .env  # Carga el archivo .env correctamente
     environment:

@@ -1,11 +1,15 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import uvicorn
 from chatbot import AdvancedChatbot
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.dirname(__file__) + "/.."))
 
 app = FastAPI()
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
 
 chatbot = AdvancedChatbot()
 

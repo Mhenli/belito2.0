@@ -9,5 +9,6 @@ belito-backend/*.pyo
 belito-backend/.env
 
 # Ignorar logs y archivos temporales
+belito-backend/.DS_Store
 belito-backend/chatbot_log.json
 belito-backend/chatbot_log.txt

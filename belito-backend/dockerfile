@@ -1,20 +1,22 @@
-# Usa una imagen base de Python
-FROM python:3.10
+# Usa una imagen base de Python optimizada
+FROM python:3.10-slim
 
 # Define el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copia solo requirements.txt e instala dependencias antes de copiar todo el código
-COPY requirements.txt /app/
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copia el código fuente del backend al contenedor
+# Copia todo el código fuente del backend al contenedor
 COPY . .
-COPY backend /app/backend
-COPY .env /app/.env
 
-# Expone el puerto en el que corre el backend (ajústalo según el framework)
+# Expone el puerto (Render usa $PORT)
 EXPOSE 8000
 
-# Comando para ejecutar el backend
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Definir la variable de entorno para el puerto dinámico de Render
+ENV PORT=8000 PYTHONPATH=/app
+
+# Comando para ejecutar el backend con Gunicorn (el mismo que en Render)
+CMD ["gunicorn", "backend.main:app", "--workers=4", "--bind=0.0.0.0:8000"]
+

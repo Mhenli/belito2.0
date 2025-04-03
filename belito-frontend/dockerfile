@@ -1,0 +1,24 @@
+# Usa una imagen base de Node.js
+FROM node:18-alpine AS builder
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia los archivos del proyecto
+COPY package.json package-lock.json ./
+RUN npm install
+
+# Copia el resto del código y construye la aplicación
+COPY . .
+RUN npm run build
+
+# Etapa final: optimizar imagen
+FROM node:18-alpine
+WORKDIR /app
+COPY --from=builder /app ./
+
+# Expone el puerto de Next.js
+EXPOSE 3000
+
+# Comando de inicio
+CMD ["npm", "run", "start"]

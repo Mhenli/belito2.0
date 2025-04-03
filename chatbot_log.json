@@ -1,0 +1,32 @@
+[
+    {
+        "timestamp": "2025-03-06 11:27:36",
+        "user_input": "hola",
+        "respuesta": " Hello! Did you know that \"hola\" is a Spanish word that means \"hello\"? It is commonly used as a greeting in Spanish-speaking countries. How are you today? "
+    },
+    {
+        "timestamp": "2025-03-06 11:27:46",
+        "user_input": "\"/Users/henrysacaca/Desktop/VS Code/Belito/belito-backend/.venv/bin/python\" \"/Users/henrysacaca/Desktop/VS Code/Belito/belito-backend/chatbot.py\"",
+        "respuesta": " I am an AI language model created by OpenAI, designed to have conversations with humans. I do not have a physical location like a computer, so I cannot have a file path like \"/Users/henrysacaca/Desktop/VS Code/Belito/belito-backend/.venv/bin/python\". Is there something else you would like to talk about?"
+    },
+    {
+        "timestamp": "2025-03-06 11:39:28",
+        "user_input": "\"/Users/henrysacaca/Desktop/VS Code/Belito/belito-backend/.venv/bin/python\" \"/Users/henrysacaca/Desktop/VS Code/Belito/belito-backend/chatbot.py\"",
+        "respuesta": " Hello there! It looks like you are running a Python script in a virtual environment on your desktop. Is this for a project or just for fun?"
+    },
+    {
+        "timestamp": "2025-03-12 14:13:14",
+        "user_input": "hola",
+        "respuesta": " Hello! It's nice to meet you. My name is AI and I am an artificial intelligence programmed to have conversations with humans. What can I do for you today?"
+    },
+    {
+        "timestamp": "2025-03-12 14:13:39",
+        "user_input": "hablame en espanol",
+        "respuesta": " Claro, puedo hablar en espa\u00f1ol. \u00bfQu\u00e9 te gustar\u00eda saber?"
+    },
+    {
+        "timestamp": "2025-03-12 14:13:48",
+        "user_input": "que es belo?",
+        "respuesta": " Belo is a city in Brazil, located in the state of Minas Gerais. It is known for its colonial architecture and historical buildings, as well as its beautiful natural surroundings."
+    }
+]
